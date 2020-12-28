@@ -6,6 +6,7 @@ submitBtn.addEventListener("click", (e) => {
   let name = document.getElementById("Name");
   let phoneNumber = document.getElementById("phoneNumber");
   let email = document.getElementById("Email");
+  let message = document.getElementById("textArea");
 
   if (hobys.value == "default") {
     alert("Select your hoby!!");
@@ -27,6 +28,7 @@ submitBtn.addEventListener("click", (e) => {
 
   localStorage.setItem("name", name.value);
   localStorage.setItem("hoby", hobys.value);
+  localStorage.setItem("message", message.value);
 });
 
 function isValidEmail(email) {
