@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.body-container {
+  overflow: hidden;
+}
+
+.one {
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+}
+
+.inner-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding-left: 15%;
+  transition: 0.4s ease;
+}
+
+.left::before {
+  content: "";
+  width: 3px;
+  position: absolute;
+  background: #c38d73;
+  height: 50%;
+  transition: 0.4s ease;
+}
+
+.left.page-scrolled::before {
+  height: 80%;
+  transition: 0.4s ease;
+}
+
+.left img {
+  width: 80%;
+  height: 80%;
+  transition: 0.2s ease;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  padding-bottom: 40px;
+}
+
+.title p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+}
+.subtext {
+  width: 100%;
+}
+.subtext p {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #777672;
+  letter-spacing: 1.5px;
+}
+
+.formarea {
+  width: 100%;
+  height: 100vh;
+  /* margin-bottom: 100px; */
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: repeating-linear-gradient(
+      236deg,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(251, 0%, 52%, 0.2) 1px,
+      hsla(251, 0%, 52%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(251, 0%, 52%, 0.2) 5px,
+      hsla(251, 0%, 52%, 0.2) 8px
+    ),
+    repeating-linear-gradient(
+      19deg,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(251, 0%, 52%, 0.2) 1px,
+      hsla(251, 0%, 52%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(251, 0%, 52%, 0.2) 5px,
+      hsla(251, 0%, 52%, 0.2) 8px
+    ),
+    linear-gradient(90deg, rgb(23, 23, 23), rgb(23, 23, 23));
+}
+.formsection {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.formrightpart {
+  width: 30%;
+  background-image: repeating-linear-gradient(
+      236deg,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(251, 0%, 52%, 0.2) 1px,
+      hsla(251, 0%, 52%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(251, 0%, 52%, 0.2) 5px,
+      hsla(251, 0%, 52%, 0.2) 8px
+    ),
+    repeating-linear-gradient(
+      19deg,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(251, 0%, 52%, 0.2) 1px,
+      hsla(251, 0%, 52%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(251, 0%, 52%, 0.2) 5px,
+      hsla(251, 0%, 52%, 0.2) 8px
+    ),
+    linear-gradient(90deg, rgb(23, 23, 23), rgb(23, 23, 23));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formrightpart h1 {
+  font-size: 3rem;
+  line-height: 2;
+  color: #fff;
+}
+
+.formrightpart h1::before {
+  content: "\f10d";
+  font-family: "fontAwesome";
+  font-size: 4rem;
+  margin-right: 10px;
+}
+.formleftpart {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.formleftpart form {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.formleftpart form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow: hidden; */
+  line-height: 3;
+}
+.formleftpart form label {
+  font-size: 1.4rem;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  color: #f2f2f2;
+}
+.formleftpart form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1.5px solid #999;
+  background-color: transparent;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-family: "Nunito";
+  color: #fff;
+}
+
+.formleftpart form input::placeholder {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.formleftpart form textarea {
+  resize: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border: 1px solid #999;
+  padding: 1rem;
+  font-family: "Nunito";
+  color: #fff;
+}
+.formleftpart form textarea::placeholder {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.btn-area {
+  display: flex;
+}
+
+.finishtext {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.button {
+  display: flex;
+  align-items: flex-start;
+}
+
+.button button {
+  width: 200px;
+  height: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  background: #c38d73;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: "Manrope", sans-serif;
+  transition: 0.25s ease;
+}
+
+.button button span {
+  margin-left: 20px;
+  font-size: 1.7rem;
+  transition: 0.25s ease;
+}
+
+.button button:hover .fa-long-arrow-right {
+  transform: translateX(20px);
+  transition: 0.25s ease;
+}
+
+.social-banner {
+  background: red;
+  margin-top: 60px;
+  background-image: repeating-linear-gradient(
+      236deg,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(251, 0%, 52%, 0.2) 1px,
+      hsla(251, 0%, 52%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(251, 0%, 52%, 0.2) 5px,
+      hsla(251, 0%, 52%, 0.2) 8px
+    ),
+    repeating-linear-gradient(
+      19deg,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      hsla(251, 0%, 52%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(251, 0%, 52%, 0.2) 1px,
+      hsla(251, 0%, 52%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(251, 0%, 52%, 0.2) 5px,
+      hsla(251, 0%, 52%, 0.2) 8px
+    ),
+    linear-gradient(90deg, rgb(23, 23, 23), rgb(23, 23, 23));
+}
+
+.misc-text {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.misc-text p {
+  padding: 15px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  font-size: 3rem;
+  padding: 15px 0;
+  border-top: 3px solid #85858533;
+  border-bottom: 3px solid #85858533;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #ffdead;
+  transition: 0.25s ease;
+}
+
+@media (max-width: 845px) {
+  .one {
+    margin-top: 70px;
+    height: auto;
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+  }
+  .left {
+    width: 20%;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .title {
+    padding-bottom: 40px;
+  }
+
+  .title p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+  }
+
+  .subtext p {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #777672;
+    letter-spacing: 1.5px;
+  }
+
+  .NewContactUs {
+    height: auto;
+  }
+  .InnerContactUs {
+    flex-direction: column;
+  }
+  .left-container-pic {
+    width: 100%;
+  }
+  .left-container-pic img {
+    width: 100%;
+  }
+  .right-container-text {
+    width: 100%;
+  }
+  .formarea {
+    height: auto;
+  }
+  .formsection {
+    height: auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .formrightpart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .formleftpart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .formrightpart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .formleftpart form {
+    width: 90%;
+  }
+  .formleftpart form div {
+    line-height: none;
+  }
+
+  .right-container-text h2 {
+    font-size: 2rem;
+    color: #242424;
+  }
+
+  .right-container-text h1 span {
+    font-size: 2.7rem;
+    white-space: nowrap;
+  }
+
+  .startProjectbtn a {
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 0.1rem 1rem;
+    margin: auto;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-weight: lighter;
+    color: #fff;
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .btn-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button button {
+    width: 200px;
+    height: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    background: #c38d73;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: "Manrope", sans-serif;
+    transition: 0.25s ease;
+  }
+
+  .button button span {
+    margin-left: 20px;
+    font-size: 1.7rem;
+    transition: 0.25s ease;
+  }
+
+  .button button:hover .fa-long-arrow-right {
+    transform: translateX(20px);
+    transition: 0.25s ease;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.7;
+  }
+
+  100% {
+    width: 700px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .misc-text p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 401px) {
+  .misc-text p {
+    font-size: 1rem;
+  }
+  .title p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  .formrightpart {
+    width: 100%;
+  }
+  .formrightpart h1 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
+.dropsown {
+  border-radius: 20px;
+}

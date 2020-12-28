@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shethink</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style/contact.css" />
+    <!-- <link rel="stylesheet" href="./css/header_style.css"> -->
+  </head>
+  <body>
+    <div class="body-container">
+      <section class="one">
+        <div class="inner-wrapper">
+          <div class="left"></div>
+          <div class="right">
+            <div class="title">
+              <p>Let's create something new</p>
+              <p>and something cool together</p>
+            </div>
+            <div class="subtext">
+              <p>Get in touch with us to get</p>
+              <p>things rolling ASAP.</p>
+              <p>Make things simpler by just filling out the form below :)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="formarea">
+        <div class="formsection">
+          <div class="formleftpart" style="margin: 20px; padding-top: 20px">
+            <form
+              action="./next.html"
+              method="POST"
+              autocomplete="off"
+              id="form"
+            >
+              <div>
+                <label for="Name">What should we call you..?</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="Name"
+                  placeholder="Stick your name here"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="Phone_number">Enter Your phone number</label>
+                <input
+                  type="number"
+                  id="phoneNumber"
+                  placeholder="number..."
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="Email"
+                  >We'll email you back as quickly as possible</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="Email"
+                  placeholder="email address"
+                  required
+                />
+              </div>
+              <div class="dropsown">
+                <label for="hobis">Choose Your Hoby:</label>
+                <select id="hobys" name="hoby">
+                  <option value="default">Select One</option>
+                  <option value="singing">Singing</option>
+                  <option value="sports">Sports</option>
+                  <option value="drwing">Drawing</option>
+                  <option value="swiming">Swiming</option>
+                  <option value="coding">Coding</option>
+                </select>
+              </div>
+              <div>
+                <label for="textArea">Got a quick question.?</label>
+                <textarea
+                  name="message"
+                  id="textArea"
+                  cols="4"
+                  rows="6"
+                  placeholder="tell us quickly what you're after"
+                ></textarea>
+              </div>
+
+              <section class="btn-area">
+                <div class="finishtext">
+                  <p>You're all sorted!</p>
+                </div>
+                <div class="button">
+                  <button
+                    id="submit"
+                    type="submit"
+                    name="submit"
+                    class="animated-button"
+                  >
+                    Submit <span><i class="fa fa-long-arrow-right"></i></span>
+                  </button>
+                </div>
+              </section>
+            </form>
+          </div>
+          <div class="formrightpart">
+            <h1>Throttle your Business towards Greater heights..!!</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-banner">
+        <div class="misc-text">
+          <p>Trying to catch us at a bad time?!</p>
+          <p>Drop a message at one of the below links</p>
+          <p>And we solemnly swear</p>
+          <p>to get back to you</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/shethink.in/" target="blank"
+            ><span><i class="fa fa-facebook" aria-hidden="true"></i></span
+          ></a>
+          <a href="https://www.instagram.com/SheThink.in/" target="blank"
+            ><span><i class="fa fa-instagram" aria-hidden="true"></i></span
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/shethink-pvt-ltd/"
+            target="blank"
+            ><span><i class="fa fa-linkedin" aria-hidden="true"></i></span
+          ></a>
+        </div>
+      </section>
+    </div>
+
+    <script type="text/javascript">
+      const button = document.querySelector(".animated-button");
+
+      button.addEventListener("click", function (e) {
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+
+        let ripple = document.createElement("span");
+        ripple.style.left = x + "px";
+        ripple.style.top = y + "px";
+        button.appendChild(ripple);
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 1000);
+      });
+    </script>
+
+    <script src="./js/header.js"></script>
+
+    <script>
+      const line = document.querySelector(".left");
+
+      window.addEventListener("scroll", () => {
+        const offset = window.scrollY;
+
+        if (offset > 30) line.classList.add("page-scrolled");
+        else line.classList.remove("page-scrolled");
+      });
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
